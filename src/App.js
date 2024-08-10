@@ -1,12 +1,14 @@
 import Body from './components/Body';
-import logo from './logo.svg';
+import appStore from './utils/appStore';
+import { Provider } from 'react-redux';
 
 function App() {
   return (
     <div className="App">
-      <Body/>
+     <Provider store={appStore}> <Body/></Provider>
     </div>
   );
 }
+
 
 export default App;
